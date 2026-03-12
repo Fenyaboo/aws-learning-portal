@@ -1,23 +1,29 @@
 <h1>Member Dashboard</h1>
 
-<p>Welcome to the AI Learning Portal.</p>
+<h2>AI Study Assistant</h2>
 
-<h3>Learning Resources</h3>
+<input id="question" placeholder="Ask AI something...">
 
-<ul>
+<button onclick="askAI()">Ask</button>
 
-<li>AI for studying and research</li>
-<li>Using AI for coding</li>
-<li>AWS cloud fundamentals</li>
-<li>Hands-on cloud labs</li>
+<p id="answer"></p>
 
-</ul>
+<script>
 
-<h3>Community</h3>
+async function askAI(){
 
-<p>
+let q=document.getElementById("question").value
 
-Members can share learning resources,
-projects, and AI prompts for studying.
+let res = await fetch("/ai",{
+method:"POST",
+headers:{'Content-Type':'application/json'},
+body:JSON.stringify({question:q})
+})
 
-</p>
+let data = await res.json()
+
+document.getElementById("answer").innerText=data.answer
+
+}
+
+</script>
