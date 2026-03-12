@@ -1,3 +1,7 @@
+import OpenAI from "openai"
+const openai = new OpenAI({
+  apiKey: process.env.OPENAI_API_KEY
+})
 const express = require("express")
 const session = require("express-session")
 const bodyParser = require("body-parser")
@@ -75,4 +79,22 @@ res.sendFile(__dirname+"/views/dashboard.html")
 
 app.listen(3000,()=>{
 console.log("Portal running on port 3000")
+})
+
+app.post("/ai", async (req,res)=>{
+
+  const question = req.body.question
+
+  const completion = await openai.chat.completions.create({
+    model:"gpt-4o-mini",
+    messages:[
+      {role:"system",content:"You are an AI tutor helping students study."},
+      {role:"user",content:question}
+    ]
+  })
+
+  res.json({
+    answer: completion.choices[0].message.content
+  })
+
 })
