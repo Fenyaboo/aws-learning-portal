@@ -99,3 +99,21 @@ app.post("/ai", async (req,res)=>{
   })
 
 })
+
+app.get("/admin/users",(req,res)=>{
+
+let users=JSON.parse(fs.readFileSync("./data/users.json"))
+
+res.json(users)
+
+})
+
+app.get("/admin/stats",(req,res)=>{
+
+let users=JSON.parse(fs.readFileSync("./data/users.json"))
+
+res.json({
+totalUsers:users.length
+})
+
+})
