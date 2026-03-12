@@ -3,7 +3,9 @@
 
 <head>
 
-<title>AI Learning Platform</title>
+<title>AI Learning Community</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
 <style>
 
@@ -19,22 +21,24 @@ background:#020617;
 padding:20px;
 display:flex;
 justify-content:space-between;
+align-items:center;
 }
 
 .logo{
 font-size:24px;
 color:#38bdf8;
+font-weight:bold;
 }
 
 nav a{
-margin-left:20px;
 color:white;
+margin-left:20px;
 text-decoration:none;
 }
 
 .hero{
 text-align:center;
-padding:120px;
+padding:120px 20px;
 }
 
 .hero h1{
@@ -49,20 +53,25 @@ margin:auto;
 }
 
 .button{
-margin-top:40px;
 display:inline-block;
+margin-top:40px;
 padding:15px 35px;
 background:#38bdf8;
 color:black;
 border-radius:8px;
 text-decoration:none;
+font-weight:bold;
 }
 
-.features{
+.section{
+padding:80px 20px;
+text-align:center;
+}
+
+.cards{
 display:flex;
 justify-content:center;
-gap:40px;
-padding:80px;
+gap:30px;
 flex-wrap:wrap;
 }
 
@@ -70,7 +79,13 @@ flex-wrap:wrap;
 background:#1e293b;
 padding:30px;
 border-radius:12px;
-width:250px;
+width:260px;
+}
+
+footer{
+text-align:center;
+padding:30px;
+background:#020617;
 }
 
 </style>
@@ -82,56 +97,140 @@ width:250px;
 <header>
 
 <div class="logo">
-AI Learning Platform
+AI Learning Community
 </div>
 
 <nav>
 
+<a href="#about">About</a>
+<a href="#ai">AI Learning</a>
+<a href="#aws">AWS Activities</a>
 <a href="/register">Register</a>
-<a href="/login">Login</a>
 <a href="/contact">Contact</a>
 
 </nav>
 
 </header>
 
+
 <section class="hero">
 
-<h1>Learn Faster With AI</h1>
+<h1>Learn Smarter With AI</h1>
 
 <p>
 
-Use artificial intelligence to improve studying,
-research, coding, and cloud computing skills.
+Our community helps students explore how artificial intelligence
+can support learning, research, coding, and cloud computing.
 
-Join a community exploring modern AI learning tools.
+We also organize AWS learning activities where students can
+practice real cloud technologies.
 
 </p>
 
 <a class="button" href="/register">
-Join Community
+
+Join the Community
+
 </a>
 
 </section>
 
-<section class="features">
+
+<section id="about" class="section">
+
+<h2>About Our Community</h2>
+
+<p>
+
+We are a student community focused on using modern technologies
+like artificial intelligence and cloud computing to improve
+learning and technical skills.
+
+Members collaborate, share resources, and participate in
+hands-on workshops.
+
+</p>
+
+</section>
+
+
+<section id="ai" class="section">
+
+<h2>Using AI For Learning</h2>
+
+<div class="cards">
 
 <div class="card">
-<h3>AI Study Tools</h3>
-<p>Use AI to summarize lessons and generate explanations.</p>
+
+<h3>AI Study Assistant</h3>
+
+<p>
+Use AI tools to summarize lessons, generate explanations,
+and improve understanding of difficult topics.
+</p>
+
 </div>
 
 <div class="card">
-<h3>Cloud Labs</h3>
-<p>Hands-on AWS labs and real infrastructure.</p>
+
+<h3>AI For Coding</h3>
+
+<p>
+Learn how AI can assist with programming, debugging,
+and software development.
+</p>
+
 </div>
 
 <div class="card">
-<h3>Learning Community</h3>
-<p>Share knowledge and study resources.</p>
+
+<h3>AI For Research</h3>
+
+<p>
+Use AI to explore information, analyze data,
+and support academic projects.
+</p>
+
+</div>
+
 </div>
 
 </section>
+
+
+<section id="aws" class="section">
+
+<h2>AWS Learning Activities</h2>
+
+<p>
+
+Our community organizes AWS activities and cloud labs
+where students can learn cloud computing using
+real AWS infrastructure.
+
+Participants will gain practical experience with
+modern cloud technologies.
+
+</p>
+
+<a class="button" href="/register">
+
+Register for AWS Activities
+
+</a>
+
+</section>
+
+
+<footer>
+
+<p>
+
+© 2026 AI Learning Community
+
+</p>
+
+</footer>
 
 </body>
 
