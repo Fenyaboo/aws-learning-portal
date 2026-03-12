@@ -117,3 +117,26 @@ totalUsers:users.length
 })
 
 })
+
+const nodemailer = require("nodemailer")
+
+let transporter = nodemailer.createTransport({
+service:"gmail",
+auth:{
+user:"yourgmail@gmail.com",
+pass:"app-password"
+}
+})
+
+function sendEmail(user){
+
+transporter.sendMail({
+
+from:"portal@site.com",
+to:user.email,
+subject:"Welcome to AI Learning Platform",
+text:"Your account has been created."
+
+})
+
+}
