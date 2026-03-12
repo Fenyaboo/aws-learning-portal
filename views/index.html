@@ -3,7 +3,7 @@
 
 <head>
 
-<title>AWS AI Learning Portal</title>
+<title>AI Learning Platform</title>
 
 <style>
 
@@ -12,21 +12,29 @@ margin:0;
 font-family:Arial;
 background:#0f172a;
 color:white;
-text-align:center;
 }
 
 header{
 background:#020617;
 padding:20px;
+display:flex;
+justify-content:space-between;
 }
 
 .logo{
-font-size:28px;
+font-size:24px;
 color:#38bdf8;
 }
 
+nav a{
+margin-left:20px;
+color:white;
+text-decoration:none;
+}
+
 .hero{
-padding:120px 20px;
+text-align:center;
+padding:120px;
 }
 
 .hero h1{
@@ -41,21 +49,20 @@ margin:auto;
 }
 
 .button{
-display:inline-block;
 margin-top:40px;
+display:inline-block;
 padding:15px 35px;
 background:#38bdf8;
 color:black;
-text-decoration:none;
 border-radius:8px;
-font-weight:bold;
+text-decoration:none;
 }
 
 .features{
-padding:80px;
 display:flex;
 justify-content:center;
 gap:40px;
+padding:80px;
 flex-wrap:wrap;
 }
 
@@ -64,11 +71,6 @@ background:#1e293b;
 padding:30px;
 border-radius:12px;
 width:250px;
-}
-
-footer{
-padding:30px;
-background:#020617;
 }
 
 </style>
@@ -80,8 +82,16 @@ background:#020617;
 <header>
 
 <div class="logo">
-AI Learning Community
+AI Learning Platform
 </div>
+
+<nav>
+
+<a href="/register">Register</a>
+<a href="/login">Login</a>
+<a href="/contact">Contact</a>
+
+</nav>
 
 </header>
 
@@ -91,16 +101,15 @@ AI Learning Community
 
 <p>
 
-Our platform helps students use artificial intelligence tools
-to improve learning, research, coding, and cloud computing skills.
+Use artificial intelligence to improve studying,
+research, coding, and cloud computing skills.
 
-Join a community of learners exploring how AI can support
-modern education and technology careers.
+Join a community exploring modern AI learning tools.
 
 </p>
 
 <a class="button" href="/register">
-Join The Community
+Join Community
 </a>
 
 </section>
@@ -109,33 +118,20 @@ Join The Community
 
 <div class="card">
 <h3>AI Study Tools</h3>
-<p>
-Learn how to use AI to summarize lessons,
-generate explanations, and improve understanding.
-</p>
+<p>Use AI to summarize lessons and generate explanations.</p>
 </div>
 
 <div class="card">
 <h3>Cloud Labs</h3>
-<p>
-Hands-on AWS and cloud projects for real-world skills.
-</p>
+<p>Hands-on AWS labs and real infrastructure.</p>
 </div>
 
 <div class="card">
-<h3>Student Community</h3>
-<p>
-Connect with other learners exploring AI and cloud technology.
-</p>
+<h3>Learning Community</h3>
+<p>Share knowledge and study resources.</p>
 </div>
 
 </section>
-
-<footer>
-
-<p>© 2026 AI Learning Community</p>
-
-</footer>
 
 </body>
 
