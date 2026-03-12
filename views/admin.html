@@ -1,0 +1,27 @@
+<h1>Admin Dashboard</h1>
+
+<h2>Registered Users</h2>
+
+<div id="users"></div>
+
+<script>
+
+async function loadUsers(){
+
+let res = await fetch("/admin/users")
+
+let users = await res.json()
+
+let html=""
+
+users.forEach(u=>{
+html += "<p>"+u.user+"</p>"
+})
+
+document.getElementById("users").innerHTML=html
+
+}
+
+loadUsers()
+
+</script>
